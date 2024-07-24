@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Student{
+            constructor(id,name,email,country){
+                this.id=id;
+                this.name=name;
+                this.email=email;
+                this.country=country;
+            }
+            display(){
+                console.log('Id'+this.id);
+                console.log('Name'+this.name);
+                console.log('Email'+this.email);
+                console.log('Country'+this.country);
+            }
+        }
+        const stu1= new Student(1,'Bobby','bob@gmail.com','UK') //calling const
+        console.log(stu1);
+        stu1.display()
+
+        class Account{
+            
+            constructor(Accholder,accnumber,balance=0){
+                this.Accholder=Accholder;
+                this.accnumber=accnumber;
+                this.balance=balance
+            }
+
+            diposit(amount){
+                console.log(amount+this.balance)
+            }
+
+            withdraw(amount){
+                if(this.balance>amount){
+                    console.log(this.balance - amount)
+                }
+                else{
+                    console.log('no balance')
+                }
+            }
+
+            checkblance(){
+                console.log(this.balance)
+            }
+
+           
+        }
+        const acc= new Account('prateek',"23456",900);
+        acc.diposit(1000)
+        acc.withdraw(300)
+        acc.checkblance()
+    </script>
+</body>
+</html>
